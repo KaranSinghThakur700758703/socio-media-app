@@ -9,9 +9,9 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const token = useSelector((state) => state.token);
 
   const getPosts = async () => {
-    const response = await fetch("https://mernstack-project-psi.vercel.app/posts", {
+    const response = await fetch("https://socio-media-app-server.vercel.app/posts", {
       method: "GET",
-      headers: { Authorization: `Bearer ${token}` },
+      headers: { Authorization: "Bearer ${token}" },
     });
     const data = await response.json();
     dispatch(setPosts({ posts: data }));
