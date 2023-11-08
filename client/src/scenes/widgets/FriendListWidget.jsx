@@ -13,10 +13,10 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `https://mernstack-project-psi.vercel.app/users/${userId}/friends`,
+      "https://socio-media-app-server.vercel.app/users/${userId}/friends",
       {
         method: "GET",
-        headers: { Authorization: `Bearer ${token}` },
+        headers: { Authorization: "Bearer ${token}" },
       }
     );
     const data = await response.json();
