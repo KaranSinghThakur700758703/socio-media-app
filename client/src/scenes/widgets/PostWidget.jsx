@@ -35,10 +35,10 @@ const PostWidget = ({
   const primary = palette.primary.main;
 
   const patchLike = async () => {
-    const response = await fetch(`https://mernstack-project-psi.vercel.app/posts/${postId}/like`, {
+    const response = await fetch("https://socio-media-app-server.vercel.app/posts/${postId}/like", {
       method: "PATCH",
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: "Bearer ${token}",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ userId: loggedInUserId }),
@@ -64,7 +64,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`https://mernstack-project-psi.vercel.app/assets/${picturePath}`}
+          src={"https://socio-media-app-server.vercel.app//assets/${picturePath}"}
         />
       )}
       <FlexBetween mt="0.25rem">
